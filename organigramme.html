@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Organigramme — VO Coaching</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Montserrat', -apple-system, sans-serif;
+    background: #0a0a0f;
+    color: #e0e0e0;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  h1 span { color: #FF7664; }
+  .subtitle {
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 50px;
+    font-weight: 500;
+  }
+
+  .org-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Connector lines */
+  .connector {
+    width: 2px;
+    height: 28px;
+    background: #FF7664;
+    border-radius: 1px;
+  }
+  .connector-short {
+    width: 2px;
+    height: 20px;
+    background: #333;
+  }
+  .connector-coral {
+    width: 2px;
+    height: 20px;
+    background: #FF7664;
+  }
+
+  /* Cards */
+  .card {
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 16px 24px;
+    text-align: center;
+    min-width: 200px;
+    position: relative;
+    background: #111;
+    transition: box-shadow 0.2s;
+  }
+  .card:hover {
+    box-shadow: 0 4px 20px rgba(255,118,100,0.1);
+  }
+  .card .name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .card .role {
+    font-size: 11px;
+    color: #FF7664;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .card .detail {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.6;
+  }
+
+  /* Card accents */
+  .card-founder {
+    border-color: #FF7664;
+    border-width: 2px;
+    background: linear-gradient(135deg, #111 0%, #1a0f0d 100%);
+    box-shadow: 0 4px 20px rgba(255,118,100,0.12);
+  }
+  .card-operator {
+    border-color: #FF7664;
+    background: linear-gradient(135deg, #111 0%, #1a0f0d 100%);
+    box-shadow: 0 2px 12px rgba(255,118,100,0.08);
+  }
+  .card-hos {
+    border-color: #FF7664;
+    background: linear-gradient(135deg, #111 0%, #1a0f0d 100%);
+  }
+  .card-closer {
+    border-color: #2a2a2a;
+    background: linear-gradient(135deg, #111 0%, #151515 100%);
+  }
+  .card-setter {
+    border-color: #2a2a2a;
+    background: linear-gradient(135deg, #111 0%, #151515 100%);
+  }
+  .card-support {
+    border-color: #2a2a2a;
+    background: linear-gradient(135deg, #111 0%, #151515 100%);
+  }
+  .card-delivery {
+    border-color: #FF7664;
+    background: linear-gradient(135deg, #111 0%, #1a0f0d 100%);
+  }
+  .card-acq {
+    border-color: #2a2a2a;
+    background: linear-gradient(135deg, #111 0%, #151515 100%);
+  }
+
+  /* Layers */
+  .layer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* Branch connectors */
+  .branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .branch-group {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    position: relative;
+  }
+  .branch-group::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 12.5%;
+    right: 12.5%;
+    height: 2px;
+    background: #FF7664;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #FF7664;
+    font-weight: 700;
+    margin: 40px 0 16px;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    font-size: 9px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-left: 4px;
+    vertical-align: middle;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    background: #FF766420;
+    color: #FF7664;
+  }
+
+  /* Funnel flow */
+  .funnel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  .funnel-step {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 10px 14px;
+    text-align: center;
+    min-width: 110px;
+  }
+  .funnel-step .step-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .funnel-step .step-tool {
+    font-size: 10px;
+    color: #666;
+    margin-top: 2px;
+    font-weight: 500;
+  }
+  .funnel-arrow {
+    color: #FF7664;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  /* Tools grid */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 8px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .tool-item {
+    background: #111;
+    border: 1px solid #1a1a1a;
+    border-radius: 10px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+  .tool-item .tool-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: #ccc;
+  }
+  .tool-item .tool-use {
+    font-size: 10px;
+    color: #555;
+    margin-top: 2px;
+    font-weight: 500;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 60px;
+    color: #333;
+    font-size: 11px;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+
+<h1>ORGANIGRAMME — <span>VO COACHING</span></h1>
+<p class="subtitle">Coaching Perte de Poids Hormonale (Femmes) &bull; Mis a jour : Mars 2026</p>
+
+<!-- ====== TOP: FOUNDER ====== -->
+<div class="org-chart">
+
+  <div class="card card-founder" style="min-width: 280px;">
+    <div class="name">Vincent Oury</div>
+    <div class="role">Fondateur &amp; Coach</div>
+    <div class="detail">Programme perte de poids hormonale<br>Endo, SOPK, thyroide, TCA<br>1 200 - 1 700 EUR / 6-7 mois</div>
+  </div>
+
+  <div class="connector"></div>
+
+  <!-- ====== GROWTH OPERATOR ====== -->
+  <div class="card card-operator" style="min-width: 320px;">
+    <div class="name">Clement Laporte</div>
+    <div class="role">Growth Operator &mdash; ASCENSIA</div>
+    <div class="detail">Marketing, Funnel, Sales Ops, Automation<br>Recrute et manage toute l'equipe operationnelle<br>Remuneration : % des benefices</div>
+  </div>
+
+  <div class="connector"></div>
+
+  <!-- ====== 3 PILLARS ====== -->
+  <div class="branch-group" style="width: 100%; max-width: 1000px;">
+
+    <!-- === ACQUISITION === -->
+    <div class="branch" style="flex:1;">
+      <div class="connector-short"></div>
+      <div class="section-title" style="margin-top:0;">Acquisition</div>
+
+      <div class="card card-acq" style="width: 100%; max-width: 280px; margin: 0 auto;">
+        <div class="name">Clement <span class="tag">direct</span></div>
+        <div class="role">Ads &amp; Funnel Manager</div>
+        <div class="detail">Meta Ads (Follower Ads + VSL)<br>Copywriting ads, emails, VSL<br>Systeme.io (funnel + sequences)</div>
+      </div>
+
+      <div class="connector-short"></div>
+
+      <div class="card card-support" style="width: 100%; max-width: 280px; margin: 0 auto;">
+        <div class="name">Monteurs Video</div>
+        <div class="role">Creation de contenu</div>
+        <div class="detail">VSL, Reels, Temoignages<br>Contractuels / freelance</div>
+      </div>
+    </div>
+
+    <!-- === CONVERSION === -->
+    <div class="branch" style="flex:1.3;">
+      <div class="connector-short"></div>
+      <div class="section-title" style="margin-top:0;">Conversion</div>
+
+      <!-- HOS -->
+      <div class="card card-hos" style="width: 100%; max-width: 280px; margin: 0 auto;">
+        <div class="name">Vincent Chaine <span class="tag">HOS</span></div>
+        <div class="role">Head of Sales</div>
+        <div class="detail">Management Sales Team<br>QA calls, coaching closers<br>Pipeline review, forecasting</div>
+      </div>
+
+      <div class="connector-coral"></div>
+
+      <!-- CLOSERS -->
+      <div class="layer" style="max-width: 100%;">
+        <div class="card card-closer">
+          <div class="name">Alexandre</div>
+          <div class="role">Closer</div>
+          <div class="detail">Closing calls entrants<br>Suivi pipeline CRM</div>
+        </div>
+        <div class="card card-closer">
+          <div class="name">Florian</div>
+          <div class="role">Closer</div>
+          <div class="detail">Closing calls entrants<br>Suivi pipeline CRM</div>
+        </div>
+        <div class="card card-closer">
+          <div class="name">Aline</div>
+          <div class="role">Closer</div>
+          <div class="detail">Closing calls entrants<br>Suivi pipeline CRM</div>
+        </div>
+      </div>
+
+      <div class="connector-short"></div>
+
+      <!-- SETTER -->
+      <div class="card card-setter" style="width: 100%; max-width: 280px; margin: 0 auto;">
+        <div class="name">Steven <span class="tag">actif</span></div>
+        <div class="role">Setter</div>
+        <div class="detail">Qualification DM Instagram<br>Book les calls dans Calendly<br>CRM Notion</div>
+      </div>
+    </div>
+
+    <!-- === DELIVERY === -->
+    <div class="branch" style="flex:1;">
+      <div class="connector-short"></div>
+      <div class="section-title" style="margin-top:0;">Delivery</div>
+
+      <div class="card card-delivery" style="width: 100%; max-width: 280px; margin: 0 auto;">
+        <div class="name">Vincent Oury</div>
+        <div class="role">Coach Principal</div>
+        <div class="detail">Programmes sport perso<br>Plans nutrition anti-inflammatoire<br>Calls groupe 2x/semaine<br>WhatsApp H24</div>
+      </div>
+
+      <div class="connector-short"></div>
+
+      <div class="card card-support" style="width: 100%; max-width: 280px; margin: 0 auto;">
+        <div class="name">App Mobile</div>
+        <div class="role">Outil Delivery</div>
+        <div class="detail">Programmes sportifs<br>Suivi nutrition<br>Messagerie coach</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== SUPPORT ====== -->
+  <div class="section-title" style="margin-top: 50px;">Support &amp; Back-Office</div>
+
+  <div class="layer">
+    <div class="card card-support">
+      <div class="name">Claude Code</div>
+      <div class="role">IA Ops (Bot Slack)</div>
+      <div class="detail">Daily briefing, dashboards<br>Calendly checks, lead alerts<br>Data sync automatise</div>
+    </div>
+    <div class="card card-support">
+      <div class="name">Bako</div>
+      <div class="role">Assistante</div>
+      <div class="detail">Admin, data entry<br>Onboarding docs<br>Taches back-office</div>
+    </div>
+  </div>
+
+  <!-- ====== FUNNEL ====== -->
+  <div class="section-title" style="margin-top: 50px;">Parcours Client (Funnel)</div>
+
+  <div class="funnel">
+    <div class="funnel-step">
+      <div class="step-name">Meta Ads</div>
+      <div class="step-tool">Follower Ads</div>
+    </div>
+    <div class="funnel-arrow">&rarr;</div>
+    <div class="funnel-step">
+      <div class="step-name">Instagram</div>
+      <div class="step-tool">Contenu organique</div>
+    </div>
+    <div class="funnel-arrow">&rarr;</div>
+    <div class="funnel-step">
+      <div class="step-name">Page Capture</div>
+      <div class="step-tool">Systeme.io</div>
+    </div>
+    <div class="funnel-arrow">&rarr;</div>
+    <div class="funnel-step">
+      <div class="step-name">VSL</div>
+      <div class="step-tool">Video de vente</div>
+    </div>
+    <div class="funnel-arrow">&rarr;</div>
+    <div class="funnel-step">
+      <div class="step-name">Booking</div>
+      <div class="step-tool">Calendly (RR)</div>
+    </div>
+    <div class="funnel-arrow">&rarr;</div>
+    <div class="funnel-step">
+      <div class="step-name">Setting</div>
+      <div class="step-tool">Steven (DM)</div>
+    </div>
+    <div class="funnel-arrow">&rarr;</div>
+    <div class="funnel-step">
+      <div class="step-name">Closing</div>
+      <div class="step-tool">3 closers</div>
+    </div>
+    <div class="funnel-arrow">&rarr;</div>
+    <div class="funnel-step">
+      <div class="step-name">Paiement</div>
+      <div class="step-tool">Stripe</div>
+    </div>
+    <div class="funnel-arrow">&rarr;</div>
+    <div class="funnel-step">
+      <div class="step-name">Coaching</div>
+      <div class="step-tool">App + WhatsApp</div>
+    </div>
+  </div>
+
+  <!-- ====== TOOLS ====== -->
+  <div class="section-title" style="margin-top: 50px;">Stack Outils</div>
+
+  <div class="tools-grid">
+    <div class="tool-item">
+      <div class="tool-name">Meta Ads</div>
+      <div class="tool-use">Acquisition payante</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-name">Systeme.io</div>
+      <div class="tool-use">Funnel + Emails</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-name">Calendly</div>
+      <div class="tool-use">Booking round-robin</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-name">Notion CRM</div>
+      <div class="tool-use">Gestion leads</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-name">Hyros</div>
+      <div class="tool-use">Attribution ads</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-name">Stripe</div>
+      <div class="tool-use">Paiements (x2)</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-name">Fathom</div>
+      <div class="tool-use">Transcription calls</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-name">Make</div>
+      <div class="tool-use">Automations</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-name">Google Sheets</div>
+      <div class="tool-use">KPIs + Tracking</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-name">Slack</div>
+      <div class="tool-use">Notifications + Ops</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-name">Onoff Business</div>
+      <div class="tool-use">Appels setting</div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-name">Instagram</div>
+      <div class="tool-use">Organique + DM</div>
+    </div>
+  </div>
+
+</div>
+
+<p class="footer">
+  ASCENSIA Marketing F.Z.E &mdash; Genere le 01/03/2026 par Claude Code
+</p>
+
+</body>
+</html>
