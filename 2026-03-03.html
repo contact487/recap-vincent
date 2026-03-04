@@ -29,36 +29,36 @@ body { background:#020617; color:#f8fafc; font-family:system-ui,-apple-system,sa
         
     <svg viewBox="0 0 200 110" style="width:220px;height:130px">
         <path d="M 20 90 A 80 80 0 0 1 180 90" fill="none" stroke="#1e293b" stroke-width="12" stroke-linecap="round"/>
-        <path d="M 20 90 A 80 80 0 0 1 23.915478696387723 65.2786404500042" fill="none" stroke="#ef4444" stroke-width="12" stroke-linecap="round"/>
-        <text x="100" y="80" text-anchor="middle" fill="#ef4444" font-size="36" font-weight="800" font-family="system-ui">1</text>
+        <path d="M 20 90 A 80 80 0 0 1 147.02282018339784 25.27864045000419" fill="none" stroke="#3b82f6" stroke-width="12" stroke-linecap="round"/>
+        <text x="100" y="80" text-anchor="middle" fill="#3b82f6" font-size="36" font-weight="800" font-family="system-ui">7</text>
         <text x="100" y="100" text-anchor="middle" fill="#64748b" font-size="13" font-family="system-ui">/10</text>
     </svg>
-        <div style="color:#ef4444;font-weight:700;font-size:16px;margin-top:4px">Journee difficile</div>
+        <div style="color:#3b82f6;font-weight:700;font-size:16px;margin-top:4px">Bonne journee</div>
     </div>
 
     <div class="cards">
         <div class="card">
-            <div class="card-value">0</div>
+            <div class="card-value">30</div>
             <div class="card-label">Appels sortants</div>
         </div>
         <div class="card">
-            <div class="card-value" style="color:#22c55e">0</div>
-            <div class="card-label">Vrais decroches (0%)</div>
+            <div class="card-value" style="color:#22c55e">4</div>
+            <div class="card-label">Vrais decroches (13%)</div>
         </div>
         <div class="card">
-            <div class="card-value" style="color:#ef4444">0</div>
+            <div class="card-value" style="color:#ef4444">1</div>
             <div class="card-label">Non decroches</div>
         </div>
         <div class="card">
-            <div class="card-value">0s</div>
+            <div class="card-value">5min53s</div>
             <div class="card-label">Duree moyenne</div>
         </div>
         <div class="card">
-            <div class="card-value">0s</div>
+            <div class="card-value">23min33s</div>
             <div class="card-label">Duree totale</div>
         </div>
         <div class="card">
-            <div class="card-value" style="color:#64748b">0</div>
+            <div class="card-value" style="color:#64748b">25</div>
             <div class="card-label">Faux decroches</div>
         </div>
     </div>
@@ -67,55 +67,94 @@ body { background:#020617; color:#f8fafc; font-family:system-ui,-apple-system,sa
         <div style="flex:1;min-width:140px;background:#0f172a;border:1px solid #1e293b;border-radius:10px;padding:14px;display:flex;align-items:center;gap:12px">
             <div style="width:44px;height:44px;border-radius:50%;background:rgba(34,197,94,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">📞</div>
             <div>
-                <div style="font-size:22px;font-weight:800;color:#f8fafc">0%</div>
+                <div style="font-size:22px;font-weight:800;color:#f8fafc">13%</div>
                 <div style="font-size:11px;color:#64748b">Taux de decroche reel</div>
             </div>
         </div>
         <div style="flex:1;min-width:140px;background:#0f172a;border:1px solid #1e293b;border-radius:10px;padding:14px;display:flex;align-items:center;gap:12px">
             <div style="width:44px;height:44px;border-radius:50%;background:rgba(99,102,241,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🎯</div>
             <div>
-                <div style="font-size:22px;font-weight:800;color:#f8fafc">0%</div>
-                <div style="font-size:11px;color:#64748b">Appels significatifs (1/0)</div>
+                <div style="font-size:22px;font-weight:800;color:#f8fafc">13%</div>
+                <div style="font-size:11px;color:#64748b">Appels significatifs (4/30)</div>
             </div>
         </div>
         <div style="flex:1;min-width:140px;background:#0f172a;border:1px solid #1e293b;border-radius:10px;padding:14px;display:flex;align-items:center;gap:12px">
             <div style="width:44px;height:44px;border-radius:50%;background:rgba(245,158,11,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🔥</div>
             <div>
-                <div style="font-size:22px;font-weight:800;color:#f8fafc">0%</div>
-                <div style="font-size:11px;color:#64748b">Appels +2min (0/0)</div>
+                <div style="font-size:22px;font-weight:800;color:#f8fafc">13%</div>
+                <div style="font-size:11px;color:#64748b">Appels +2min (4/30)</div>
             </div>
         </div>
     </div>
 
     <div class="section-title">Repartition des durees</div>
     <div style="display:flex;border-radius:8px;overflow:hidden;margin-bottom:8px">
-        
+        <div style="width:37.8%;background:#64748b;height:32px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:600;min-width:30px" title="<30s: 14">14</div><div style="width:40.5%;background:#6366f1;height:32px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:600;min-width:30px" title="30s-1m: 15">15</div><div style="width:10.8%;background:#3b82f6;height:32px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:600;min-width:30px" title="1-2m: 4">4</div><div style="width:5.4%;background:#22c55e;height:32px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:600;min-width:30px" title="2-5m: 2">2</div><div style="width:5.4%;background:#f59e0b;height:32px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:600;min-width:30px" title="+5m: 2">2</div>
     </div>
     <div style="font-size:12px;color:#64748b;margin-bottom:24px">
-        <span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px"><span style="width:10px;height:10px;border-radius:2px;background:#64748b;display:inline-block"></span><30s: 0</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px"><span style="width:10px;height:10px;border-radius:2px;background:#6366f1;display:inline-block"></span>30s-1m: 0</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px"><span style="width:10px;height:10px;border-radius:2px;background:#3b82f6;display:inline-block"></span>1-2m: 0</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px"><span style="width:10px;height:10px;border-radius:2px;background:#22c55e;display:inline-block"></span>2-5m: 0</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px"><span style="width:10px;height:10px;border-radius:2px;background:#f59e0b;display:inline-block"></span>+5m: 0</span>
+        <span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px"><span style="width:10px;height:10px;border-radius:2px;background:#64748b;display:inline-block"></span><30s: 14</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px"><span style="width:10px;height:10px;border-radius:2px;background:#6366f1;display:inline-block"></span>30s-1m: 15</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px"><span style="width:10px;height:10px;border-radius:2px;background:#3b82f6;display:inline-block"></span>1-2m: 4</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px"><span style="width:10px;height:10px;border-radius:2px;background:#22c55e;display:inline-block"></span>2-5m: 2</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px"><span style="width:10px;height:10px;border-radius:2px;background:#f59e0b;display:inline-block"></span>+5m: 2</span>
     </div>
 
-    <div class="section-title">Detail des appels significatifs (1)</div>
+    <div class="section-title">Detail des appels significatifs (4)</div>
     
         <div style="text-align:center;padding:16px;margin-bottom:24px;background:#0f172a;border:1px solid #1e293b;border-radius:12px">
             <span style="color:#94a3b8;font-size:14px">Score moyen des appels transcrits : </span>
-            <span style="color:#22c55e;font-weight:700;font-size:20px">10.0/10</span>
+            <span style="color:#f59e0b;font-weight:700;font-size:20px">6.0/10</span>
         </div>
     
         <div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:20px;margin-bottom:16px">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
                 <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
                     <span style="color:#f8fafc;font-weight:700;font-size:16px">Appel 1</span>
-                    <span style="color:#64748b;font-size:14px">19h47</span>
-                    <span style="color:#94a3b8;font-size:14px">06 74 23 44 63</span>
-                    <span style="color:#64748b;font-size:14px">21min52s</span>
+                    <span style="color:#64748b;font-size:14px">17h25</span>
+                    <span style="color:#94a3b8;font-size:14px">32477647569</span>
+                    <span style="color:#64748b;font-size:14px">1min07s</span>
                 </div>
-                <span style="background:#22c55e;color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:14px">10/10</span>
+                <span style="background:#f59e0b;color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:14px">4/10</span>
             </div>
-            <div style="margin:10px 0;padding:12px;background:#1e293b;border-radius:8px;color:#cbd5e1;font-size:13px;line-height:1.6">Coralie a sollicité un accompagnement via la méthode de Vincent pour perdre environ 20 kg et retrouver son poids de forme. Styliste en télétravail de 32 ans, elle souffre du syndrome des ovaires polykystiques (SOPK) et de résistance à l'insuline, ce qui complique sa perte de poids malgré ses efforts passés. Elle recherche un cadre strict et un accompagnement personnalisé, notamment pour gérer s...</div>
-            <div style="padding:4px 0;color:#94a3b8;font-size:13px">• Appel long (+10min) — conversation approfondie</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• Bonne qualification — situation du prospect exploree</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• Offre presentee</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• Objection mais suivi prevu</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• Bon equilibre de parole (prospect 48%)</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• 6 action(s) de suivi identifiee(s)</div>
+            <div style="margin:10px 0;padding:12px;background:#1e293b;border-radius:8px;color:#cbd5e1;font-size:13px;line-height:1.6">Steven, membre de l'équipe du coach Vincent Oury, a contacté une cliente qui avait laissé ses coordonnées pour obtenir des informations sur la perte de poids et les problèmes hormonaux. Bien que le coach ait proposé un court échange pour faire le point, la cliente a exprimé sa surprise d'être appelée et a finalement indiqué qu'elle n'était plus intéressée par la démarche. L'appel s'est conclu p...</div>
+            <div style="padding:4px 0;color:#94a3b8;font-size:13px">• Qualification partielle</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• Bon equilibre de parole (prospect 38%)</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• 2 action(s) de suivi identifiee(s)</div>
         </div>
-    
+        <div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:20px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+                    <span style="color:#f8fafc;font-weight:700;font-size:16px">Appel 2</span>
+                    <span style="color:#64748b;font-size:14px">16h35</span>
+                    <span style="color:#94a3b8;font-size:14px">06 50 12 20 68</span>
+                    <span style="color:#64748b;font-size:14px">13min30s</span>
+                </div>
+                <span style="background:#22c55e;color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:14px">9/10</span>
+            </div>
+            <div style="margin:10px 0;padding:12px;background:#1e293b;border-radius:8px;color:#cbd5e1;font-size:13px;line-height:1.6">Steven, de l'équipe de Vincent Houri, a contacté Laurie pour discuter de ses difficultés de perte de poids liées à des problèmes hormonaux suspectés. Laurie explique qu'elle ne parvient pas à perdre 5 kilos malgré une hygiène de vie saine et une activité physique régulière (5 à 6 fois par semaine). Un second rendez-vous d'une heure en visioconférence a été programmé pour le samedi à 11h00 avec ...</div>
+            <div style="padding:4px 0;color:#94a3b8;font-size:13px">• Appel long (+10min) — conversation approfondie</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• Bonne qualification — situation du prospect exploree</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• RDV/Closing planifie</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• Bon equilibre de parole (prospect 61%)</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• 4 action(s) de suivi identifiee(s)</div>
+        </div>
+        <div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:20px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+                    <span style="color:#f8fafc;font-weight:700;font-size:16px">Appel 3</span>
+                    <span style="color:#64748b;font-size:14px">13h30</span>
+                    <span style="color:#94a3b8;font-size:14px">06 85 93 58 89</span>
+                    <span style="color:#64748b;font-size:14px">7min39s</span>
+                </div>
+                <span style="background:#64748b;color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:14px">N/A</span>
+            </div>
+            
+            
+        </div>
+        <div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:20px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+                    <span style="color:#f8fafc;font-weight:700;font-size:16px">Appel 4</span>
+                    <span style="color:#64748b;font-size:14px">10h24</span>
+                    <span style="color:#94a3b8;font-size:14px">06 85 93 58 89</span>
+                    <span style="color:#64748b;font-size:14px">1min17s</span>
+                </div>
+                <span style="background:#f59e0b;color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:14px">5/10</span>
+            </div>
+            <div style="margin:10px 0;padding:12px;background:#1e293b;border-radius:8px;color:#cbd5e1;font-size:13px;line-height:1.6">Steven, membre de l'équipe du coach Vincent Houry, a contacté Alison suite à sa demande d'informations sur la perte de poids. Alison n'étant pas disponible immédiatement, les deux interlocuteurs ont convenu d'un rendez-vous téléphonique à 14h30. Steven s'est engagé à envoyer un message de rappel avant de la recontacter.</div>
+            <div style="padding:4px 0;color:#94a3b8;font-size:13px">• Qualification partielle</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• RDV/Closing planifie</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• Bon equilibre de parole (prospect 38%)</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• 2 action(s) de suivi identifiee(s)</div>
+        </div>
+    <div style="text-align:center;color:#64748b;font-size:13px;padding:12px">25 appel(s) court(s) (&lt;60s) non transcrits</div>
 
     <div style="text-align:center;padding:32px 0 16px;color:#334155;font-size:12px">
         Genere automatiquement — ASCENSIA Marketing
