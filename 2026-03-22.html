@@ -105,7 +105,7 @@ body { background:#020617; color:#f8fafc; font-family:system-ui,-apple-system,sa
     
         <div style="margin-top:16px">
             <div style="color:#94a3b8;font-size:13px;font-weight:600;margin-bottom:8px">1 appel(s) court(s) (&lt;60s)</div>
-            <div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 38 93 60 05 (10h01, 6s) <audio controls preload="none" style="height:24px;max-width:150px"><source src="https://contact487.github.io/recap-vincent/audio/2026-03-22_short_1.mp4" type="audio/mp4"></audio></div>
+            <div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 38 93 60 05 (10h01, 6s) <button id="play-short-0" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-03-22_short_1.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div>
         </div>
 
     <div style="text-align:center;padding:32px 0 16px;color:#334155;font-size:12px">
@@ -113,5 +113,7 @@ body { background:#020617; color:#f8fafc; font-family:system-ui,-apple-system,sa
     </div>
 
 </div>
+
+<script>var cA=null,cB=null;function togglePlay(b,u){if(cA&&cB===b&&!cA.paused){cA.pause();b.textContent="▶ Ecouter";b.style.background="#6366f1";return}if(cA){cA.pause();cA.currentTime=0;if(cB){cB.textContent="▶ Ecouter";cB.style.background="#6366f1"}}cA=new Audio(u);cB=b;b.textContent="⏸ Pause";b.style.background="#ef4444";cA.play();cA.onended=function(){b.textContent="▶ Ecouter";b.style.background="#6366f1";cA=null;cB=null};cA.onerror=function(){b.textContent="Erreur";b.style.background="#64748b"}}</script>
 </body>
 </html>
