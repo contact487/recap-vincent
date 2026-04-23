@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recap Setting Vincent — 2026-04-23</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#020617; color:#f8fafc; font-family:system-ui,-apple-system,sans-serif; padding:24px; min-height:100vh; }
+.container { max-width:800px; margin:0 auto; }
+.header { text-align:center; padding:32px 0 24px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-bottom:24px; }
+.card { background:#0f172a; border:1px solid #1e293b; border-radius:12px; padding:16px; text-align:center; }
+.card-value { font-size:28px; font-weight:800; color:#f8fafc; }
+.card-label { font-size:12px; color:#64748b; margin-top:4px; text-transform:uppercase; letter-spacing:0.5px; }
+.section-title { color:#94a3b8; font-size:14px; text-transform:uppercase; letter-spacing:1px; margin:24px 0 12px; font-weight:600; }
+</style>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <div style="font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px">Recap Setting</div>
+        <div style="font-size:24px;font-weight:800;color:#f8fafc;margin-bottom:4px">Vincent Oury</div>
+        <div style="font-size:14px;color:#64748b">2026-04-23</div>
+    </div>
+
+    <div style="text-align:center;margin-bottom:24px">
+        
+    <svg viewBox="0 0 200 110" style="width:220px;height:130px">
+        <path d="M 20 90 A 80 80 0 0 1 180 90" fill="none" stroke="#1e293b" stroke-width="12" stroke-linecap="round"/>
+        <path d="M 20 90 A 80 80 0 0 1 164.72135954999578 42.977179816602145" fill="none" stroke="#22c55e" stroke-width="12" stroke-linecap="round"/>
+        <text x="100" y="80" text-anchor="middle" fill="#22c55e" font-size="36" font-weight="800" font-family="system-ui">8</text>
+        <text x="100" y="100" text-anchor="middle" fill="#64748b" font-size="13" font-family="system-ui">/10</text>
+    </svg>
+        <div style="color:#22c55e;font-weight:700;font-size:16px;margin-top:4px">Excellente journee</div>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <div class="card-value" style="color:#6366f1">0</div>
+            <div class="card-label">Leads du jour</div>
+        </div>
+        <div class="card">
+            <div class="card-value">49</div>
+            <div class="card-label">Appels sortants</div>
+        </div>
+        <div class="card">
+            <div class="card-value" style="color:#22c55e">10</div>
+            <div class="card-label">Vrais decroches (20%)</div>
+        </div>
+        <div class="card">
+            <div class="card-value" style="color:#ef4444">4</div>
+            <div class="card-label">Non decroches</div>
+        </div>
+        <div class="card">
+            <div class="card-value">9min06s</div>
+            <div class="card-label">Duree moyenne</div>
+        </div>
+        <div class="card">
+            <div class="card-value">91min02s</div>
+            <div class="card-label">Duree totale</div>
+        </div>
+        <div class="card">
+            <div class="card-value" style="color:#64748b">35</div>
+            <div class="card-label">Faux decroches</div>
+        </div>
+    </div>
+
+    <div style="display:flex;gap:12px;margin-bottom:24px;flex-wrap:wrap">
+        <div style="flex:1;min-width:140px;background:#0f172a;border:1px solid #1e293b;border-radius:10px;padding:14px;display:flex;align-items:center;gap:12px">
+            <div style="width:44px;height:44px;border-radius:50%;background:rgba(34,197,94,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">📞</div>
+            <div>
+                <div style="font-size:22px;font-weight:800;color:#f8fafc">20%</div>
+                <div style="font-size:11px;color:#64748b">Taux de decroche reel</div>
+            </div>
+        </div>
+        <div style="flex:1;min-width:140px;background:#0f172a;border:1px solid #1e293b;border-radius:10px;padding:14px;display:flex;align-items:center;gap:12px">
+            <div style="width:44px;height:44px;border-radius:50%;background:rgba(99,102,241,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🎯</div>
+            <div>
+                <div style="font-size:22px;font-weight:800;color:#f8fafc">20%</div>
+                <div style="font-size:11px;color:#64748b">Appels significatifs (10/49)</div>
+            </div>
+        </div>
+        <div style="flex:1;min-width:140px;background:#0f172a;border:1px solid #1e293b;border-radius:10px;padding:14px;display:flex;align-items:center;gap:12px">
+            <div style="width:44px;height:44px;border-radius:50%;background:rgba(245,158,11,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🔥</div>
+            <div>
+                <div style="font-size:22px;font-weight:800;color:#f8fafc">24%</div>
+                <div style="font-size:11px;color:#64748b">Appels +2min (12/49)</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">Repartition des durees</div>
+    <div style="display:flex;border-radius:8px;overflow:hidden;margin-bottom:8px">
+        <div style="width:50.7%;background:#64748b;height:32px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:600;min-width:30px" title="<30s: 34">34</div><div style="width:16.4%;background:#6366f1;height:32px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:600;min-width:30px" title="30s-1m: 11">11</div><div style="width:14.9%;background:#3b82f6;height:32px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:600;min-width:30px" title="1-2m: 10">10</div><div style="width:9.0%;background:#22c55e;height:32px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:600;min-width:30px" title="2-5m: 6">6</div><div style="width:9.0%;background:#f59e0b;height:32px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:600;min-width:30px" title="+5m: 6">6</div>
+    </div>
+    <div style="font-size:12px;color:#64748b;margin-bottom:24px">
+        <span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px"><span style="width:10px;height:10px;border-radius:2px;background:#64748b;display:inline-block"></span><30s: 34</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px"><span style="width:10px;height:10px;border-radius:2px;background:#6366f1;display:inline-block"></span>30s-1m: 11</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px"><span style="width:10px;height:10px;border-radius:2px;background:#3b82f6;display:inline-block"></span>1-2m: 10</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px"><span style="width:10px;height:10px;border-radius:2px;background:#22c55e;display:inline-block"></span>2-5m: 6</span><span style="display:inline-flex;align-items:center;gap:4px;margin-right:14px"><span style="width:10px;height:10px;border-radius:2px;background:#f59e0b;display:inline-block"></span>+5m: 6</span>
+    </div>
+
+    <div class="section-title">Detail des appels significatifs (10)</div>
+    
+        <div style="text-align:center;padding:16px;margin-bottom:24px;background:#0f172a;border:1px solid #1e293b;border-radius:12px">
+            <span style="color:#94a3b8;font-size:14px">Score moyen des appels transcrits : </span>
+            <span style="color:#f59e0b;font-weight:700;font-size:20px">5.5/10</span>
+        </div>
+    
+        <div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:20px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+                    <span style="color:#f8fafc;font-weight:700;font-size:16px">Steven Kuy → 06 20 93 93 02</span>
+                    
+                    <span style="color:#64748b;font-size:14px">14h49</span>
+                    <span style="color:#94a3b8;font-size:14px">20min15s</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px">
+                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+              <button onclick="togglePlay(this,'https://contact487.github.io/recap-vincent/audio/2026-04-23_1.mp4')" style="background:#6366f1;color:#fff;width:36px;height:36px;border:none;border-radius:50%;font-size:16px;cursor:pointer">▶</button>
+              <button class="p-spd" onclick="toggleSpeed(this)" style="background:#334155;color:#fff;padding:4px 8px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">x1</button>
+              <div class="p-bar" style="flex:1;min-width:80px;height:6px;background:#1e293b;border-radius:3px;cursor:pointer;position:relative"><div class="p-prog" style="width:0%;height:100%;background:#6366f1;border-radius:3px"></div></div>
+              <span class="p-time" style="color:#64748b;font-size:11px;min-width:70px"></span>
+            </div>
+                    <span style="background:#64748b;color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:14px">N/A</span>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:20px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+                    <span style="color:#f8fafc;font-weight:700;font-size:16px">Steven Kuy → 32488619399</span>
+                    
+                    <span style="color:#64748b;font-size:14px">14h30</span>
+                    <span style="color:#94a3b8;font-size:14px">16min58s</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px">
+                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+              <button onclick="togglePlay(this,'https://contact487.github.io/recap-vincent/audio/2026-04-23_2.mp4')" style="background:#6366f1;color:#fff;width:36px;height:36px;border:none;border-radius:50%;font-size:16px;cursor:pointer">▶</button>
+              <button class="p-spd" onclick="toggleSpeed(this)" style="background:#334155;color:#fff;padding:4px 8px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">x1</button>
+              <div class="p-bar" style="flex:1;min-width:80px;height:6px;background:#1e293b;border-radius:3px;cursor:pointer;position:relative"><div class="p-prog" style="width:0%;height:100%;background:#6366f1;border-radius:3px"></div></div>
+              <span class="p-time" style="color:#64748b;font-size:11px;min-width:70px"></span>
+            </div>
+                    <span style="background:#64748b;color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:14px">N/A</span>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:20px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+                    <span style="color:#f8fafc;font-weight:700;font-size:16px">Steven Kuy → 06 13 71 69 88</span>
+                    
+                    <span style="color:#64748b;font-size:14px">13h24</span>
+                    <span style="color:#94a3b8;font-size:14px">1min04s</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px">
+                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+              <button onclick="togglePlay(this,'https://contact487.github.io/recap-vincent/audio/2026-04-23_3.mp4')" style="background:#6366f1;color:#fff;width:36px;height:36px;border:none;border-radius:50%;font-size:16px;cursor:pointer">▶</button>
+              <button class="p-spd" onclick="toggleSpeed(this)" style="background:#334155;color:#fff;padding:4px 8px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">x1</button>
+              <div class="p-bar" style="flex:1;min-width:80px;height:6px;background:#1e293b;border-radius:3px;cursor:pointer;position:relative"><div class="p-prog" style="width:0%;height:100%;background:#6366f1;border-radius:3px"></div></div>
+              <span class="p-time" style="color:#64748b;font-size:11px;min-width:70px"></span>
+            </div>
+                    <span style="background:#64748b;color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:14px">N/A</span>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:20px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+                    <span style="color:#f8fafc;font-weight:700;font-size:16px">Steven Kuy → Siriane</span>
+                    <span style="color:#475569;font-size:13px">06 49 92 34 66</span>
+                    <span style="color:#64748b;font-size:14px">12h40</span>
+                    <span style="color:#94a3b8;font-size:14px">26min22s</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px">
+                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+              <button onclick="togglePlay(this,'https://contact487.github.io/recap-vincent/audio/2026-04-23_4.mp4')" style="background:#6366f1;color:#fff;width:36px;height:36px;border:none;border-radius:50%;font-size:16px;cursor:pointer">▶</button>
+              <button class="p-spd" onclick="toggleSpeed(this)" style="background:#334155;color:#fff;padding:4px 8px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">x1</button>
+              <div class="p-bar" style="flex:1;min-width:80px;height:6px;background:#1e293b;border-radius:3px;cursor:pointer;position:relative"><div class="p-prog" style="width:0%;height:100%;background:#6366f1;border-radius:3px"></div></div>
+              <span class="p-time" style="color:#64748b;font-size:11px;min-width:70px"></span>
+            </div>
+                    <span style="background:#22c55e;color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:14px">8/10</span>
+                </div>
+            </div>
+            <div style="margin:10px 0;padding:12px;background:#1e293b;border-radius:8px;color:#cbd5e1;font-size:13px;line-height:1.6">Steven a appelé Siriane pour faire le point sur sa situation avant son rendez-vous avec Alex concernant la méthode de Vincent. Siriane, assistante sociale de 32 ans, souhaite perdre 17 kg pour atteindre un poids de forme de 75 kg. Elle souffre d'un SOPK et d'une résistance à l'insuline, ce qui freine ses résultats malgré une alimentation équilibrée et une pratique sportive régulière (basket et ...</div>
+            <div style="padding:4px 0;color:#94a3b8;font-size:13px">• Appel long (+10min) — conversation approfondie</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• Bonne qualification — situation du prospect exploree</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• Objection mais suivi prevu</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• Bon equilibre de parole (prospect 55%)</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• 5 action(s) de suivi identifiee(s)</div>
+        </div>
+        <div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:20px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+                    <span style="color:#f8fafc;font-weight:700;font-size:16px">Steven Kuy → Marine</span>
+                    <span style="color:#475569;font-size:13px">06 23 34 32 52</span>
+                    <span style="color:#64748b;font-size:14px">12h35</span>
+                    <span style="color:#94a3b8;font-size:14px">1min29s</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px">
+                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+              <button onclick="togglePlay(this,'https://contact487.github.io/recap-vincent/audio/2026-04-23_5.mp4')" style="background:#6366f1;color:#fff;width:36px;height:36px;border:none;border-radius:50%;font-size:16px;cursor:pointer">▶</button>
+              <button class="p-spd" onclick="toggleSpeed(this)" style="background:#334155;color:#fff;padding:4px 8px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">x1</button>
+              <div class="p-bar" style="flex:1;min-width:80px;height:6px;background:#1e293b;border-radius:3px;cursor:pointer;position:relative"><div class="p-prog" style="width:0%;height:100%;background:#6366f1;border-radius:3px"></div></div>
+              <span class="p-time" style="color:#64748b;font-size:11px;min-width:70px"></span>
+            </div>
+                    <span style="background:#f59e0b;color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:14px">4/10</span>
+                </div>
+            </div>
+            <div style="margin:10px 0;padding:12px;background:#1e293b;border-radius:8px;color:#cbd5e1;font-size:13px;line-height:1.6">Steven, de l'équipe de Vincent Oury, a contacté Marine suite à sa demande d'informations sur la perte de poids et les hormones. Marine étant au travail lors de l'appel, ils ont convenu d'un échange téléphonique de dix à quinze minutes vers 19h30. Steven enverra un message de confirmation avant de la rappeler.</div>
+            <div style="padding:4px 0;color:#94a3b8;font-size:13px">• Qualification partielle</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• RDV/Closing planifie</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• Prospect parle beaucoup (67%) — setter pas assez directif?</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• 2 action(s) de suivi identifiee(s)</div>
+        </div>
+        <div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:20px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+                    <span style="color:#f8fafc;font-weight:700;font-size:16px">Steven Kuy → Laura</span>
+                    <span style="color:#475569;font-size:13px">06 06 44 18 99</span>
+                    <span style="color:#64748b;font-size:14px">09h51</span>
+                    <span style="color:#94a3b8;font-size:14px">1min24s</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px">
+                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+              <button onclick="togglePlay(this,'https://contact487.github.io/recap-vincent/audio/2026-04-23_6.mp4')" style="background:#6366f1;color:#fff;width:36px;height:36px;border:none;border-radius:50%;font-size:16px;cursor:pointer">▶</button>
+              <button class="p-spd" onclick="toggleSpeed(this)" style="background:#334155;color:#fff;padding:4px 8px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">x1</button>
+              <div class="p-bar" style="flex:1;min-width:80px;height:6px;background:#1e293b;border-radius:3px;cursor:pointer;position:relative"><div class="p-prog" style="width:0%;height:100%;background:#6366f1;border-radius:3px"></div></div>
+              <span class="p-time" style="color:#64748b;font-size:11px;min-width:70px"></span>
+            </div>
+                    <span style="background:#f59e0b;color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:14px">5/10</span>
+                </div>
+            </div>
+            <div style="margin:10px 0;padding:12px;background:#1e293b;border-radius:8px;color:#cbd5e1;font-size:13px;line-height:1.6">Steven, de l'équipe du coach Vincent Houri, a contacté Laura suite à sa demande d'informations concernant la perte de poids et les problèmes hormonaux. Laura étant indisponible cette semaine en raison des vacances scolaires, ils ont convenu d'un rendez-vous téléphonique pour mardi prochain à 9h30.</div>
+            <div style="padding:4px 0;color:#94a3b8;font-size:13px">• Qualification partielle</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• RDV/Closing planifie</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• Bon equilibre de parole (prospect 46%)</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• 2 action(s) de suivi identifiee(s)</div>
+        </div>
+        <div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:20px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+                    <span style="color:#f8fafc;font-weight:700;font-size:16px">Steven Kuy → 06 77 92 23 83</span>
+                    
+                    <span style="color:#64748b;font-size:14px">09h30</span>
+                    <span style="color:#94a3b8;font-size:14px">12min09s</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px">
+                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+              <button onclick="togglePlay(this,'https://contact487.github.io/recap-vincent/audio/2026-04-23_7.mp4')" style="background:#6366f1;color:#fff;width:36px;height:36px;border:none;border-radius:50%;font-size:16px;cursor:pointer">▶</button>
+              <button class="p-spd" onclick="toggleSpeed(this)" style="background:#334155;color:#fff;padding:4px 8px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">x1</button>
+              <div class="p-bar" style="flex:1;min-width:80px;height:6px;background:#1e293b;border-radius:3px;cursor:pointer;position:relative"><div class="p-prog" style="width:0%;height:100%;background:#6366f1;border-radius:3px"></div></div>
+              <span class="p-time" style="color:#64748b;font-size:11px;min-width:70px"></span>
+            </div>
+                    <span style="background:#64748b;color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:14px">N/A</span>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:20px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+                    <span style="color:#f8fafc;font-weight:700;font-size:16px">Steven Kuy → 06 52 83 65 06</span>
+                    
+                    <span style="color:#64748b;font-size:14px">09h08</span>
+                    <span style="color:#94a3b8;font-size:14px">5min11s</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px">
+                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+              <button onclick="togglePlay(this,'https://contact487.github.io/recap-vincent/audio/2026-04-23_8.mp4')" style="background:#6366f1;color:#fff;width:36px;height:36px;border:none;border-radius:50%;font-size:16px;cursor:pointer">▶</button>
+              <button class="p-spd" onclick="toggleSpeed(this)" style="background:#334155;color:#fff;padding:4px 8px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">x1</button>
+              <div class="p-bar" style="flex:1;min-width:80px;height:6px;background:#1e293b;border-radius:3px;cursor:pointer;position:relative"><div class="p-prog" style="width:0%;height:100%;background:#6366f1;border-radius:3px"></div></div>
+              <span class="p-time" style="color:#64748b;font-size:11px;min-width:70px"></span>
+            </div>
+                    <span style="background:#64748b;color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:14px">N/A</span>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:20px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+                    <span style="color:#f8fafc;font-weight:700;font-size:16px">Steven Kuy → Sonia</span>
+                    <span style="color:#475569;font-size:13px">06 03 94 18 53</span>
+                    <span style="color:#64748b;font-size:14px">08h46</span>
+                    <span style="color:#94a3b8;font-size:14px">1min06s</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px">
+                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+              <button onclick="togglePlay(this,'https://contact487.github.io/recap-vincent/audio/2026-04-23_9.mp4')" style="background:#6366f1;color:#fff;width:36px;height:36px;border:none;border-radius:50%;font-size:16px;cursor:pointer">▶</button>
+              <button class="p-spd" onclick="toggleSpeed(this)" style="background:#334155;color:#fff;padding:4px 8px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">x1</button>
+              <div class="p-bar" style="flex:1;min-width:80px;height:6px;background:#1e293b;border-radius:3px;cursor:pointer;position:relative"><div class="p-prog" style="width:0%;height:100%;background:#6366f1;border-radius:3px"></div></div>
+              <span class="p-time" style="color:#64748b;font-size:11px;min-width:70px"></span>
+            </div>
+                    <span style="background:#f59e0b;color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:14px">5/10</span>
+                </div>
+            </div>
+            <div style="margin:10px 0;padding:12px;background:#1e293b;border-radius:8px;color:#cbd5e1;font-size:13px;line-height:1.6">Steven, membre de l'équipe du coach Vincent Houri, a contacté Sonia suite à sa demande d'informations concernant la perte de poids et les problèmes hormonaux. Ils ont convenu d'un rendez-vous téléphonique aujourd'hui à 19h00 pour faire le point sur sa situation et voir s'ils peuvent travailler ensemble.</div>
+            <div style="padding:4px 0;color:#94a3b8;font-size:13px">• Bonne qualification — situation du prospect exploree</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• RDV/Closing planifie</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• Setter parle trop (72%) — laisser plus de place au prospect</div><div style="padding:4px 0;color:#94a3b8;font-size:13px">• 2 action(s) de suivi identifiee(s)</div>
+        </div>
+        <div style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:20px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+                <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+                    <span style="color:#f8fafc;font-weight:700;font-size:16px">Steven Kuy → 06 23 43 34 30</span>
+                    
+                    <span style="color:#64748b;font-size:14px">08h00</span>
+                    <span style="color:#94a3b8;font-size:14px">5min04s</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px">
+                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+              <button onclick="togglePlay(this,'https://contact487.github.io/recap-vincent/audio/2026-04-23_10.mp4')" style="background:#6366f1;color:#fff;width:36px;height:36px;border:none;border-radius:50%;font-size:16px;cursor:pointer">▶</button>
+              <button class="p-spd" onclick="toggleSpeed(this)" style="background:#334155;color:#fff;padding:4px 8px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">x1</button>
+              <div class="p-bar" style="flex:1;min-width:80px;height:6px;background:#1e293b;border-radius:3px;cursor:pointer;position:relative"><div class="p-prog" style="width:0%;height:100%;background:#6366f1;border-radius:3px"></div></div>
+              <span class="p-time" style="color:#64748b;font-size:11px;min-width:70px"></span>
+            </div>
+                    <span style="background:#64748b;color:#fff;padding:4px 12px;border-radius:20px;font-weight:700;font-size:14px">N/A</span>
+                </div>
+            </div>
+            
+            
+        </div>
+    
+        <div style="margin-top:16px">
+            <div style="color:#94a3b8;font-size:13px;font-weight:600;margin-bottom:8px">35 appel(s) court(s) (&lt;60s)</div>
+            <div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 98 38 02 17 (15h12, 2s) <button id="play-short-0" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_1.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 68 34 25 86 (14h04, 5s) <button id="play-short-1" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_2.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 42 54 32 22 (14h02, 6s) <button id="play-short-2" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_3.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 01 77 63 10 (14h00, 7s) <button id="play-short-3" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_4.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 72 76 75 04 (13h34, 6s) <button id="play-short-4" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_5.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 65 97 08 45 (13h33, 5s) <button id="play-short-5" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_6.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 14 97 08 06 (13h32, 4s) <button id="play-short-6" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_7.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 66 28 22 07 (13h30, 21s) <button id="play-short-7" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_8.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 13 11 76 70 (13h29, 3s) <button id="play-short-8" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_9.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 07 88 22 72 04 (13h28, 1s) <button id="play-short-9" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_10.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 21 09 45 69 (13h27, 2s) <button id="play-short-10" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_11.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 67 63 00 58 (13h22, 2s) <button id="play-short-11" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_12.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 72 86 52 74 (13h20, 4s) <button id="play-short-12" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_13.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 30 23 03 24 (13h19, 2s) <button id="play-short-13" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_14.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 63 54 94 03 (12h34, 6s) <button id="play-short-14" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_15.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 24 88 22 68 (12h32, 6s) <button id="play-short-15" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_16.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 18 72 32 72 (12h01, 2s) <button id="play-short-16" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_17.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 24 91 42 52 (09h19, 2s) <button id="play-short-17" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_18.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 07 63 08 78 90 (09h16, 2s) <button id="play-short-18" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_19.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 74 59 53 15 (09h05, 5s) <button id="play-short-19" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_20.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 66 50 76 68 (09h02, 11s) <button id="play-short-20" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_21.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 78 75 41 27 (09h01, 5s) <button id="play-short-21" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_22.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 64 47 12 15 (08h57, 4s) <button id="play-short-22" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_23.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 24 53 72 71 (08h56, 3s) <button id="play-short-23" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_24.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 17 20 90 53 (08h52, 3s) <button id="play-short-24" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_25.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 87 15 16 34 (08h49, 3s) <button id="play-short-25" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_26.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 50 77 37 85 (08h44, 6s) <button id="play-short-26" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_27.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 58 58 41 15 (08h41, 54s) <button id="play-short-27" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_28.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 48 09 77 42 (08h40, 7s) <button id="play-short-28" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_29.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 78 73 96 97 (08h37, 2s) <button id="play-short-29" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_30.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 74 75 67 47 (08h36, 4s) <button id="play-short-30" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_31.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 07 76 92 72 20 (08h34, 28s) <button id="play-short-31" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_32.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 99 95 35 36 (08h30, 12s) <button id="play-short-32" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_33.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 06 65 16 15 20 (08h26, 5s) <button id="play-short-33" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_34.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div><div style="padding:4px 0;color:#64748b;font-size:13px">Steven Kuy → 32476263767 (08h23, 4s) <button id="play-short-34" onclick="togglePlay(this, 'https://contact487.github.io/recap-vincent/audio/2026-04-23_short_35.mp4')" style="background:#334155;color:#fff;padding:4px 10px;border:none;border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit">▶</button></div>
+        </div>
+
+    <div style="text-align:center;padding:32px 0 16px;color:#334155;font-size:12px">
+        Genere automatiquement — ASCENSIA Marketing
+    </div>
+
+</div>
+
+<script>
+var cA=null,cB=null,cRate=1;
+function fmtTime(s){var m=Math.floor(s/60),ss=Math.floor(s%60);return m+":"+(ss<10?"0":"")+ss}
+function togglePlay(btn,url){
+  var wrap=btn.parentElement;
+  var bar=wrap.querySelector(".p-bar");
+  var prog=wrap.querySelector(".p-prog");
+  var time=wrap.querySelector(".p-time");
+  var spd=wrap.querySelector(".p-spd");
+  if(cA&&cB===btn&&!cA.paused){cA.pause();btn.textContent="\u25b6";return}
+  if(cA){cA.pause();cA.currentTime=0;cB.textContent="\u25b6";var ow=cB.parentElement;if(ow){var op=ow.querySelector(".p-prog");if(op)op.style.width="0%";var ot=ow.querySelector(".p-time");if(ot)ot.textContent=""}}
+  cA=new Audio(url);cB=btn;cRate=1;
+  if(spd)spd.textContent="x1";
+  btn.textContent="\u23f8";
+  cA.play();
+  cA.ontimeupdate=function(){
+    if(cA.duration){
+      var pct=(cA.currentTime/cA.duration*100);
+      if(prog)prog.style.width=pct+"%";
+      if(time)time.textContent=fmtTime(cA.currentTime)+" / "+fmtTime(cA.duration);
+    }
+  };
+  cA.onended=function(){btn.textContent="\u25b6";if(prog)prog.style.width="0%";if(time)time.textContent="";cA=null;cB=null};
+  cA.onerror=function(){btn.textContent="\u26a0";};
+  if(bar){bar.onclick=function(e){if(cA&&cA.duration){var r=e.offsetX/bar.offsetWidth;cA.currentTime=r*cA.duration}}}
+}
+function toggleSpeed(btn){
+  if(!cA)return;
+  cRate=cRate===1?1.5:cRate===1.5?2:1;
+  cA.playbackRate=cRate;
+  btn.textContent="x"+cRate;
+}
+</script>
+</body>
+</html>
