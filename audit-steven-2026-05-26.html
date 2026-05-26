@@ -27,6 +27,9 @@ h1 { font-size:24px; font-weight:800; margin-bottom:4px; }
 .btn-full:hover { background:#475569; }
 .btn-play.playing { background:#22c55e; }
 .time { color:#94a3b8; font-size:12px; margin-left:auto; }
+.btn-copy { background:#1e293b; color:#f8fafc; padding:8px 14px; border:1px solid #334155; border-radius:8px; font-size:12px; font-weight:600; cursor:pointer; font-family:inherit; margin-top:14px; transition:all 0.15s; }
+.btn-copy:hover { background:#334155; border-color:#475569; }
+.btn-copy.copied { background:#22c55e; border-color:#22c55e; color:#fff; }
 .block { padding:14px 16px; border-radius:10px; margin-bottom:10px; }
 .block.bad { background:rgba(239,68,68,0.08); border-left:3px solid #ef4444; }
 .block.good { background:rgba(34,197,94,0.08); border-left:3px solid #22c55e; }
@@ -49,6 +52,7 @@ footer { text-align:center; padding:32px 0 16px; color:#334155; font-size:11px; 
       <div class="stat"><div class="stat-val">7</div><div class="stat-lbl">Calls analysés (&gt;60s)</div></div>
       <div class="stat"><div class="stat-val" style="color:#ef4444">57%</div><div class="stat-lbl">% NON</div></div>
     </div>
+    <button class="btn-copy" onclick="copyPageURL(this)">📋 Copier le lien de la page</button>
   </header>
 
   
@@ -165,6 +169,15 @@ footer { text-align:center; padding:32px 0 16px; color:#334155; font-size:11px; 
 </div>
 
 <script>
+function copyPageURL(btn) {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = '✓ Lien copié';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
 let currentAudio = null;
 let currentBtn = null;
 
