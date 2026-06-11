@@ -33,6 +33,10 @@ h1{font-size:24px;font-weight:800;margin-bottom:4px}
 .btn-full:hover{background:#475569}
 .btn-play.playing,.btn-full.playing{background:#22c55e}
 .time{color:#94a3b8;font-size:12px;margin-left:auto}
+.seek{flex-basis:100%;width:100%;margin-top:12px;height:6px;-webkit-appearance:none;appearance:none;background:#1e293b;border-radius:4px;cursor:pointer;outline:none}
+.seek::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:18px;height:18px;border-radius:50%;background:#6366f1;cursor:pointer;border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.4)}
+.seek::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#6366f1;cursor:pointer;border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.4)}
+.seek:hover::-webkit-slider-thumb{background:#7c7ff5}
 .btn-copy{background:#1e293b;color:#f8fafc;padding:8px 14px;border:1px solid #334155;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:14px;transition:all 0.15s}
 .btn-copy:hover{background:#334155;border-color:#475569}
 .btn-copy.copied{background:#22c55e;border-color:#22c55e;color:#fff}
@@ -74,15 +78,16 @@ footer{text-align:center;padding:32px 0 16px;color:#334155;font-size:11px}
   </div>
 
   <div class="player">
-    <button class="btn-play" data-key="steven-1" data-jump="733">▶ Phase de close (12:13)</button>
-    <button class="btn-full" data-key="steven-1" data-jump="0">▶ Tout (0:00)</button>
+    <button class="btn-play" data-key="steven-1" data-jump="733" data-label="▶ Phase de close (12:13)">▶ Phase de close (12:13)</button>
+    <button class="btn-full" data-key="steven-1" data-jump="0" data-label="▶ Tout (0:00)">▶ Tout (0:00)</button>
     <div class="time" id="time-steven-1">0:00 / 13:28</div>
+    <input type="range" class="seek" id="seek-steven-1" min="0" max="1000" value="0" step="1">
     <audio id="audio-steven-1" preload="metadata" src="https://contact487.github.io/recap-vincent/audio/audit-setting-2026-06-11-steven-1.mp4"></audio>
   </div>
 
   <div class="block bad">
     <div class="block-label">Anomalie</div>
-    <div class="block-text">Le setter ne propose pas explicitement le R2 avec un closer, il laisse le prospect décider quand il veut reprendre contact.</div>
+    <div class="block-text">Le setter ne propose pas explicitement de R2 avec un closer, il laisse le prospect décider quand il veut reprendre contact.</div>
   </div>
   <div class="block neutral">
     <div class="block-label">Verbatim close</div>
@@ -105,19 +110,20 @@ footer{text-align:center;padding:32px 0 16px;color:#334155;font-size:11px}
   </div>
 
   <div class="player">
-    <button class="btn-play" data-key="steven-2" data-jump="1541">▶ Phase de close (25:41)</button>
-    <button class="btn-full" data-key="steven-2" data-jump="0">▶ Tout (0:00)</button>
+    <button class="btn-play" data-key="steven-2" data-jump="1541" data-label="▶ Phase de close (25:41)">▶ Phase de close (25:41)</button>
+    <button class="btn-full" data-key="steven-2" data-jump="0" data-label="▶ Tout (0:00)">▶ Tout (0:00)</button>
     <div class="time" id="time-steven-2">0:00 / 26:56</div>
+    <input type="range" class="seek" id="seek-steven-2" min="0" max="1000" value="0" step="1">
     <audio id="audio-steven-2" preload="metadata" src="https://contact487.github.io/recap-vincent/audio/audit-setting-2026-06-11-steven-2.mp4"></audio>
   </div>
 
   <div class="block bad">
     <div class="block-label">Anomalie</div>
-    <div class="block-text">Le setter ne propose pas explicitement le R2 avec un closer nommé, mais fixe un rendez-vous potentiel après les vacances du prospect.</div>
+    <div class="block-text">Le setter ne nomme pas de closer pour le R2 et ne propose pas de créneau ou de lien pour le fixer, laissant le prospect dans l'incertitude.</div>
   </div>
   <div class="block neutral">
     <div class="block-label">Verbatim close</div>
-    <div class="block-text">«&nbsp;OK, parfait, parfait. Alors pour commencer, est-ce que tu pourrais me redire un peu, qu'est-ce que toi aujourd'hui tu recherches exactement ?&nbsp;»</div>
+    <div class="block-text">«&nbsp;Je te propose un deuxième rendez-vous pour qu'on puisse échanger et te présenter l'accompagnement.&nbsp;»</div>
   </div>
   <div class="block info">
     <div class="block-label">Closer cité</div>
@@ -130,25 +136,26 @@ footer{text-align:center;padding:32px 0 16px;color:#334155;font-size:11px}
     <div class="num">3</div>
     <div class="meta">
       <div class="title">Vincent Oury <span class="setter-badge">Steven</span></div>
-      <div class="sub">2026-06-09 · 09h30 · 06 99 73 55 26 · durée 15:42 · ton engageant · setter parle 45%</div>
+      <div class="sub">2026-06-09 · 09h30 · 06 99 73 55 26 · durée 15:42 · ton engageant · setter parle 55%</div>
     </div>
     <div class="chips"><span class="chip chip-r2">R2</span></div>
   </div>
 
   <div class="player">
-    <button class="btn-play" data-key="steven-3" data-jump="867">▶ Phase de close (14:27)</button>
-    <button class="btn-full" data-key="steven-3" data-jump="0">▶ Tout (0:00)</button>
+    <button class="btn-play" data-key="steven-3" data-jump="867" data-label="▶ Phase de close (14:27)">▶ Phase de close (14:27)</button>
+    <button class="btn-full" data-key="steven-3" data-jump="0" data-label="▶ Tout (0:00)">▶ Tout (0:00)</button>
     <div class="time" id="time-steven-3">0:00 / 15:42</div>
+    <input type="range" class="seek" id="seek-steven-3" min="0" max="1000" value="0" step="1">
     <audio id="audio-steven-3" preload="metadata" src="https://contact487.github.io/recap-vincent/audio/audit-setting-2026-06-11-steven-3.mp4"></audio>
   </div>
 
   <div class="block bad">
     <div class="block-label">Anomalie</div>
-    <div class="block-text">Le setter ne propose pas explicitement le R2 et ne nomme pas de closer, laissant le prospect décider de la prochaine étape.</div>
+    <div class="block-text">Le setter n'a pas nommé explicitement le closer pour le R2, laissant le prospect dans l'incertitude quant à qui il va parler.</div>
   </div>
   <div class="block neutral">
     <div class="block-label">Verbatim close</div>
-    <div class="block-text">«&nbsp;Je te propose qu'on se revoit demain à 10h pour un appel de 30 minutes pour qu'on puisse échanger sur ce que tu souhaites faire.&nbsp;»</div>
+    <div class="block-text">«&nbsp;Je te propose de prendre un rendez-vous avec Florian pour qu'il puisse te proposer un programme personnalisé.&nbsp;»</div>
   </div>
   <div class="block info">
     <div class="block-label">Closer cité</div>
@@ -167,15 +174,16 @@ footer{text-align:center;padding:32px 0 16px;color:#334155;font-size:11px}
   </div>
 
   <div class="player">
-    <button class="btn-play" data-key="steven-4" data-jump="674">▶ Phase de close (11:14)</button>
-    <button class="btn-full" data-key="steven-4" data-jump="0">▶ Tout (0:00)</button>
+    <button class="btn-play" data-key="steven-4" data-jump="674" data-label="▶ Phase de close (11:14)">▶ Phase de close (11:14)</button>
+    <button class="btn-full" data-key="steven-4" data-jump="0" data-label="▶ Tout (0:00)">▶ Tout (0:00)</button>
     <div class="time" id="time-steven-4">0:00 / 12:29</div>
+    <input type="range" class="seek" id="seek-steven-4" min="0" max="1000" value="0" step="1">
     <audio id="audio-steven-4" preload="metadata" src="https://contact487.github.io/recap-vincent/audio/audit-setting-2026-06-11-steven-4.mp4"></audio>
   </div>
 
   <div class="block bad">
     <div class="block-label">Anomalie</div>
-    <div class="block-text">Le setter ne nomme pas de closer pour le R2 et ne fixe pas de date précise, il demande au prospect de revenir vers lui.</div>
+    <div class="block-text">Le setter ne nomme pas le closer pour le R2, il propose un R2 mais sans nommer le closer.</div>
   </div>
   <div class="block neutral">
     <div class="block-label">Verbatim close</div>
@@ -198,19 +206,20 @@ footer{text-align:center;padding:32px 0 16px;color:#334155;font-size:11px}
   </div>
 
   <div class="player">
-    <button class="btn-play" data-key="steven-5" data-jump="1184">▶ Phase de close (19:44)</button>
-    <button class="btn-full" data-key="steven-5" data-jump="0">▶ Tout (0:00)</button>
+    <button class="btn-play" data-key="steven-5" data-jump="1184" data-label="▶ Phase de close (19:44)">▶ Phase de close (19:44)</button>
+    <button class="btn-full" data-key="steven-5" data-jump="0" data-label="▶ Tout (0:00)">▶ Tout (0:00)</button>
     <div class="time" id="time-steven-5">0:00 / 20:59</div>
+    <input type="range" class="seek" id="seek-steven-5" min="0" max="1000" value="0" step="1">
     <audio id="audio-steven-5" preload="metadata" src="https://contact487.github.io/recap-vincent/audio/audit-setting-2026-06-11-steven-5.mp4"></audio>
   </div>
 
   <div class="block bad">
     <div class="block-label">Anomalie</div>
-    <div class="block-text">Le setter propose bien le R2 et nomme le closer, mais il ne fixe pas de créneau ou de lien, laissant le prospect devoir proposer ses disponibilités.</div>
+    <div class="block-text">Le setter propose le R2 mais ne fixe pas de date/lien, laissant le prospect devoir proposer ses disponibilités.</div>
   </div>
   <div class="block neutral">
     <div class="block-label">Verbatim close</div>
-    <div class="block-text">«&nbsp;Alors, je vais juste vous proposer le deuxième rendez-vous pour qu'on puisse te faire découvrir comment on peut t'aider à reprendre le contrôle sur tout ça. Est-ce que toi ça t'intéresse ?&nbsp;»</div>
+    <div class="block-text">«&nbsp;Alors, je vais juste te proposer le deuxième rendez-vous pour qu'on puisse te faire découvrir comment on peut t'aider à reprendre le contrôle sur tout ça. Est-ce que toi ça t'intéresse ?&nbsp;»</div>
   </div>
   <div class="block info">
     <div class="block-label">Closer cité</div>
@@ -232,29 +241,51 @@ function copyPageURL(btn) {
   });
 }
 
+const fmt = s => { const m = Math.floor(s/60), sec = Math.floor(s%60); return m + ':' + (sec<10?'0':'') + sec; };
 let cA = null, cBtn = null;
+
+// Barre de progression + temps : listeners persistants par audio
+document.querySelectorAll('audio').forEach(audio => {
+  const key = audio.id.replace('audio-', '');
+  const seek = document.getElementById('seek-' + key);
+  const timeEl = document.getElementById('time-' + key);
+  audio.addEventListener('loadedmetadata', () => {
+    timeEl.textContent = '0:00 / ' + fmt(audio.duration || 0);
+  });
+  audio.addEventListener('timeupdate', () => {
+    if (audio.duration) {
+      if (!seek.matches(':active')) seek.value = (audio.currentTime / audio.duration) * 1000;
+      timeEl.textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration);
+    }
+  });
+  // Drag / clic sur la barre = navigation libre
+  seek.addEventListener('input', () => {
+    if (audio.duration) audio.currentTime = (seek.value / 1000) * audio.duration;
+  });
+  audio.addEventListener('ended', () => {
+    if (cBtn) { cBtn.classList.remove('playing'); cBtn.textContent = cBtn.dataset.label; }
+    cA = null;
+  });
+});
+
+// Boutons : saut vers une ancre (close / début) + play/pause
 document.querySelectorAll('.btn-play, .btn-full').forEach(btn => {
   btn.addEventListener('click', () => {
     const key = btn.dataset.key;
     const jump = parseInt(btn.dataset.jump, 10);
     const audio = document.getElementById('audio-' + key);
-    const timeEl = document.getElementById('time-' + key);
-    if (cA && cA !== audio) { cA.pause(); cA.currentTime = 0; if (cBtn) cBtn.classList.remove('playing'); }
+    if (cA && cA !== audio) {
+      cA.pause();
+      if (cBtn) { cBtn.classList.remove('playing'); cBtn.textContent = cBtn.dataset.label; }
+    }
     if (cA === audio && !audio.paused) {
-      audio.pause(); btn.classList.remove('playing');
-      btn.textContent = btn.textContent.replace('⏸', '▶'); return;
+      audio.pause(); btn.classList.remove('playing'); btn.textContent = btn.dataset.label; return;
     }
     audio.currentTime = jump;
     audio.play();
     cA = audio; cBtn = btn;
     btn.classList.add('playing');
-    const orig = btn.textContent;
-    btn.textContent = '⏸' + orig.slice(1);
-    audio.ontimeupdate = () => {
-      const fmt = s => { const m = Math.floor(s/60), sec = Math.floor(s%60); return m + ':' + (sec<10?'0':'') + sec; };
-      timeEl.textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration || 0);
-    };
-    audio.onended = () => { btn.classList.remove('playing'); btn.textContent = orig; cA = null; };
+    btn.textContent = '⏸' + btn.dataset.label.slice(1);
   });
 });
 </script>
