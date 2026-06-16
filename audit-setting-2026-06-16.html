@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audit Setting Vincent · 2026-06-16</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#020617;color:#f8fafc;font-family:-apple-system,system-ui,sans-serif;padding:24px}
+.container{max-width:880px;margin:0 auto}
+header{text-align:center;padding:24px 0 32px;border-bottom:1px solid #1e293b;margin-bottom:32px}
+h1{font-size:24px;font-weight:800;margin-bottom:4px}
+.lead{color:#94a3b8;font-size:14px}
+.stats{display:flex;gap:12px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+.stat{background:#0f172a;padding:12px 20px;border-radius:10px;border:1px solid #1e293b}
+.stat-val{font-size:22px;font-weight:800}
+.stat-lbl{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:0.5px}
+.section-title{color:#94a3b8;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin:32px 0 12px;font-weight:600}
+.card{background:#0f172a;border:1px solid #1e293b;border-radius:14px;padding:24px;margin-bottom:20px}
+.card-head{display:flex;gap:16px;align-items:flex-start;margin-bottom:20px;flex-wrap:wrap}
+.num{background:#ef4444;color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;flex-shrink:0}
+.meta{flex:1;min-width:200px}
+.title{font-size:18px;font-weight:700}
+.setter-badge{background:#1e293b;color:#94a3b8;padding:2px 8px;border-radius:6px;font-size:11px;font-weight:600;margin-left:8px;text-transform:uppercase;letter-spacing:0.5px}
+.sub{font-size:12px;color:#64748b;margin-top:2px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{padding:4px 10px;border-radius:12px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px}
+.chip-r2{background:rgba(239,68,68,0.15);color:#ef4444}
+.chip-monologue{background:rgba(245,158,11,0.15);color:#f59e0b}
+.chip-rushed{background:rgba(99,102,241,0.15);color:#6366f1}
+.player{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:20px;padding:14px;background:#020617;border-radius:10px}
+.btn-play,.btn-full{background:#6366f1;color:#fff;padding:10px 16px;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
+.btn-play:hover,.btn-full:hover{background:#7c7ff5}
+.btn-full{background:#334155}
+.btn-full:hover{background:#475569}
+.btn-play.playing,.btn-full.playing{background:#22c55e}
+.time{color:#94a3b8;font-size:12px;margin-left:auto}
+.seek{flex-basis:100%;width:100%;margin-top:12px;height:6px;-webkit-appearance:none;appearance:none;background:#1e293b;border-radius:4px;cursor:pointer;outline:none}
+.seek::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:18px;height:18px;border-radius:50%;background:#6366f1;cursor:pointer;border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.4)}
+.seek::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#6366f1;cursor:pointer;border:3px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.4)}
+.seek:hover::-webkit-slider-thumb{background:#7c7ff5}
+.btn-copy{background:#1e293b;color:#f8fafc;padding:8px 14px;border:1px solid #334155;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:14px;transition:all 0.15s}
+.btn-copy:hover{background:#334155;border-color:#475569}
+.btn-copy.copied{background:#22c55e;border-color:#22c55e;color:#fff}
+.block{padding:14px 16px;border-radius:10px;margin-bottom:10px}
+.block.bad{background:rgba(239,68,68,0.08);border-left:3px solid #ef4444}
+.block.neutral{background:rgba(148,163,184,0.06);border-left:3px solid #64748b}
+.block.info{background:rgba(99,102,241,0.06);border-left:3px solid #6366f1}
+.block-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:6px;color:#94a3b8}
+.block.bad .block-label{color:#ef4444}
+.block-text{font-size:14px;line-height:1.5;color:#e2e8f0}
+footer{text-align:center;padding:32px 0 16px;color:#334155;font-size:11px}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Audit Setting Vincent · 2026-06-16</h1>
+    <div class="lead">Période 2026-06-15 → 2026-06-16 · 5 calls analysés · 2 avec anomalie</div>
+    <div class="stats">
+      <div class="stat"><div class="stat-val" style="color:#22c55e">3</div><div class="stat-lbl">OK</div></div>
+      <div class="stat"><div class="stat-val" style="color:#ef4444">2</div><div class="stat-lbl">R2 manqué</div></div>
+      <div class="stat"><div class="stat-val" style="color:#f59e0b">0</div><div class="stat-lbl">Monologue</div></div>
+      <div class="stat"><div class="stat-val" style="color:#6366f1">0</div><div class="stat-lbl">Expédié</div></div>
+    </div>
+    <div class="stats" style="margin-top:8px"><div class="stat"><div class="stat-val" style="color:#f59e0b">2/5</div><div class="stat-lbl">Steven avec anomalie</div></div></div>
+    <button class="btn-copy" onclick="copyPageURL(this)">📋 Copier le lien de la page</button>
+  </header>
+
+  <div class="section-title">Calls avec anomalie</div>
+  
+<div class="card">
+  <div class="card-head">
+    <div class="num">1</div>
+    <div class="meta">
+      <div class="title">Anne <span class="setter-badge">Steven</span></div>
+      <div class="sub">2026-06-15 · 13h30 · 32474666353 · durée 16:24 · ton engageant · setter parle 40%</div>
+    </div>
+    <div class="chips"><span class="chip chip-r2">R2</span></div>
+  </div>
+
+  <div class="player">
+    <button class="btn-play" data-key="steven-1" data-jump="909" data-label="▶ Phase de close (15:09)">▶ Phase de close (15:09)</button>
+    <button class="btn-full" data-key="steven-1" data-jump="0" data-label="▶ Tout (0:00)">▶ Tout (0:00)</button>
+    <div class="time" id="time-steven-1">0:00 / 16:24</div>
+    <input type="range" class="seek" id="seek-steven-1" min="0" max="1000" value="0" step="1">
+    <audio id="audio-steven-1" preload="metadata" src="https://contact487.github.io/recap-vincent/audio/audit-setting-2026-06-16-steven-1.mp4"></audio>
+  </div>
+
+  <div class="block bad">
+    <div class="block-label">Anomalie</div>
+    <div class="block-text">Le setter ne propose pas explicitement le R2 avec un closer nommé, il propose juste un nouveau rendez-vous sans préciser qui sera l'interlocuteur.</div>
+  </div>
+  <div class="block neutral">
+    <div class="block-label">Verbatim close</div>
+    <div class="block-text">«&nbsp;Bon, écoute, moi j'ai fait le tour de tout ce que j'avais à savoir. Donc moi ce qu'il me reste à proposer, c'est de te renvoyer vers un deuxième rendez-vous plus long, donc de 45 minutes en visio, pour te présenter justement comment on peut t'aider à reprendre le contrôle sur tout ça.&nbsp;»</div>
+  </div>
+  <div class="block info">
+    <div class="block-label">Closer cité</div>
+    <div class="block-text">—</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-head">
+    <div class="num">2</div>
+    <div class="meta">
+      <div class="title">Emmanuel <span class="setter-badge">Steven</span></div>
+      <div class="sub">2026-06-15 · 12h00 · 06 76 17 06 28 · durée 12:58 · ton engageant · setter parle 40%</div>
+    </div>
+    <div class="chips"><span class="chip chip-r2">R2</span></div>
+  </div>
+
+  <div class="player">
+    <button class="btn-play" data-key="steven-2" data-jump="703" data-label="▶ Phase de close (11:43)">▶ Phase de close (11:43)</button>
+    <button class="btn-full" data-key="steven-2" data-jump="0" data-label="▶ Tout (0:00)">▶ Tout (0:00)</button>
+    <div class="time" id="time-steven-2">0:00 / 12:58</div>
+    <input type="range" class="seek" id="seek-steven-2" min="0" max="1000" value="0" step="1">
+    <audio id="audio-steven-2" preload="metadata" src="https://contact487.github.io/recap-vincent/audio/audit-setting-2026-06-16-steven-2.mp4"></audio>
+  </div>
+
+  <div class="block bad">
+    <div class="block-label">Anomalie</div>
+    <div class="block-text">Le setter ne propose pas explicitement de R2 avec un closer nommé, mais fixe un rappel pour le mois d'août ou septembre.</div>
+  </div>
+  <div class="block neutral">
+    <div class="block-label">Verbatim close</div>
+    <div class="block-text">«&nbsp;Bon alors du coup, on va dire que tu te vois plus y arriver tout seul. Est-ce que tu as encore un espoir ?&nbsp;»</div>
+  </div>
+  <div class="block info">
+    <div class="block-label">Closer cité</div>
+    <div class="block-text">—</div>
+  </div>
+</div>
+
+
+  <footer>Audit OnOff + Gemini 2.5 Flash-Lite · /audit-setting · ASCENSIA</footer>
+</div>
+
+<script>
+function copyPageURL(btn) {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = '✓ Lien copié';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+const fmt = s => { const m = Math.floor(s/60), sec = Math.floor(s%60); return m + ':' + (sec<10?'0':'') + sec; };
+let cA = null, cBtn = null;
+
+// Barre de progression + temps : listeners persistants par audio
+document.querySelectorAll('audio').forEach(audio => {
+  const key = audio.id.replace('audio-', '');
+  const seek = document.getElementById('seek-' + key);
+  const timeEl = document.getElementById('time-' + key);
+  audio.addEventListener('loadedmetadata', () => {
+    timeEl.textContent = '0:00 / ' + fmt(audio.duration || 0);
+  });
+  audio.addEventListener('timeupdate', () => {
+    if (audio.duration) {
+      if (!seek.matches(':active')) seek.value = (audio.currentTime / audio.duration) * 1000;
+      timeEl.textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration);
+    }
+  });
+  // Drag / clic sur la barre = navigation libre
+  seek.addEventListener('input', () => {
+    if (audio.duration) audio.currentTime = (seek.value / 1000) * audio.duration;
+  });
+  audio.addEventListener('ended', () => {
+    if (cBtn) { cBtn.classList.remove('playing'); cBtn.textContent = cBtn.dataset.label; }
+    cA = null;
+  });
+});
+
+// Boutons : saut vers une ancre (close / début) + play/pause
+document.querySelectorAll('.btn-play, .btn-full').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const key = btn.dataset.key;
+    const jump = parseInt(btn.dataset.jump, 10);
+    const audio = document.getElementById('audio-' + key);
+    if (cA && cA !== audio) {
+      cA.pause();
+      if (cBtn) { cBtn.classList.remove('playing'); cBtn.textContent = cBtn.dataset.label; }
+    }
+    if (cA === audio && !audio.paused) {
+      audio.pause(); btn.classList.remove('playing'); btn.textContent = btn.dataset.label; return;
+    }
+    audio.currentTime = jump;
+    audio.play();
+    cA = audio; cBtn = btn;
+    btn.classList.add('playing');
+    btn.textContent = '⏸' + btn.dataset.label.slice(1);
+  });
+});
+</script>
+</body></html>
